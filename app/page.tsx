@@ -106,11 +106,6 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <img
-              className="hero-product-image"
-              src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80"
-              alt="Lipoless tirzepatide product"
-            />
           </article>
 
           <div className="partner-strip">

@@ -203,7 +203,7 @@ body {
       rgba(38, 26, 26, 0.7),
       rgba(38, 26, 26, 0.35)
     ),
-    url("https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=1500&q=80");
+    url("https://image.portaldacidade.com/unsafe/https://bucket.portaldacidade.com/fozdoiguacu.portaldacidade.com/img/news/2025-11/medicamentos-paraguaios-para-emagrecer-sao-proibidos-pela-anvisa-69208e38d8e3b.jpeg");
   background-size: cover;
   background-position: center;
 }
@@ -341,12 +341,6 @@ body {
   }
 }
 
-.hero-banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
 .hero-actions {
   display: flex;
   gap: 0.75rem;
@@ -356,13 +350,6 @@ body {
 .hero-copy .buy-now-button {
   background: #ffffff;
   color: var(--brand-primary-dark);
-}
-
-.hero-product-image {
-  width: min(280px, 34%);
-  object-fit: contain;
-  margin: 0 2rem 1.5rem 0;
-  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.28));
 }
 
 .order-page {
