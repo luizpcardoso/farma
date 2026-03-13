@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const categories = [
   "Imported Perfumes",
   "Supplements",
@@ -97,8 +99,18 @@ export default function Home() {
                 A modern conversion-focused layout with promotional banners and
                 product showcases for commercial presentations.
               </p>
-              <a href="#">I want this template</a>
+              <div className="hero-actions">
+                <a href="#">I want this template</a>
+                <Link href="/buy" className="buy-now-button">
+                  Buy now
+                </Link>
+              </div>
             </div>
+            <img
+              className="hero-product-image"
+              src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80"
+              alt="Lipoless tirzepatide product"
+            />
           </article>
 
           <div className="partner-strip">
