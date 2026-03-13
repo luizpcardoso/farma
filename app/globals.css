@@ -397,3 +397,26 @@ body {
   padding: 0.85rem 1rem;
   cursor: pointer;
 }
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.language-switcher select {
+  border: 1px solid #e8cfc9;
+  border-radius: 10px;
+  padding: 0.5rem 0.65rem;
+  background: #fff;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.buy-page-language {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
