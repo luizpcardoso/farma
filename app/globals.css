@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -60,9 +64,9 @@ body {
 
 .header-main {
   display: grid;
-  grid-template-columns: 240px 1fr 280px;
+  grid-template-columns: minmax(220px, 240px) minmax(320px, 1fr) auto;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem 1.25rem;
   padding: 1rem 0;
 }
 
@@ -102,6 +106,7 @@ body {
   border: 2px solid #fde4df;
   border-radius: 14px;
   overflow: hidden;
+  min-width: 0;
 }
 
 .search-box input {
@@ -123,6 +128,8 @@ body {
 
 .header-actions {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   justify-content: flex-end;
   gap: 0.7rem;
 }
@@ -134,6 +141,7 @@ body {
   padding: 0.75rem;
   border-radius: 12px;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .header-nav {
@@ -142,9 +150,11 @@ body {
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.1rem;
   align-items: center;
   min-height: 48px;
+  padding: 0.35rem 0;
 }
 
 .nav-links a {
@@ -282,6 +292,10 @@ body {
   box-shadow: var(--shadow);
 }
 
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
 .product-card img {
   width: 100%;
   height: 190px;
@@ -322,11 +336,16 @@ body {
 
 @media (max-width: 980px) {
   .header-main {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(220px, 1fr) minmax(260px, 1fr);
+  }
+
+  .search-box {
+    grid-column: 1 / -1;
   }
 
   .header-actions {
     justify-content: flex-start;
+    grid-column: 1 / -1;
   }
 
   .nav-links {
@@ -337,6 +356,12 @@ body {
 
   .home-layout,
   .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .header-main {
     grid-template-columns: 1fr;
   }
 }
@@ -396,4 +421,58 @@ body {
   font-weight: 700;
   padding: 0.85rem 1rem;
   cursor: pointer;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.language-switcher select {
+  border: 1px solid #e8cfc9;
+  border-radius: 10px;
+  padding: 0.5rem 0.65rem;
+  background: #fff;
+  color: var(--text-main);
+  font-weight: 600;
+  max-width: 190px;
+}
+
+.buy-page-language {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+a,
+button,
+input,
+select,
+.product-card,
+.categories-panel,
+.partner-strip,
+.order-card,
+.hero-copy a,
+.header-actions a,
+.nav-links a {
+  transition: all 0.25s ease;
+}
+
+a:hover,
+button:hover,
+select:hover {
+  opacity: 0.92;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--brand-primary-dark);
+  outline-offset: 2px;
 }
